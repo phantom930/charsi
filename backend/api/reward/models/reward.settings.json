@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rewards",
+  "info": {
+    "name": "Reward",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "game": {
+      "model": "game"
+    },
+    "item": {
+      "model": "item"
+    },
+    "description": {
+      "type": "text"
+    },
+    "values": {
+      "type": "json"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "ITEM",
+        "BALANCE"
+      ],
+      "default": "ITEM",
+      "required": true
+    },
+    "balance": {
+      "type": "decimal"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "name": "Item",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "majorCategory": {
+      "model": "item-major-category"
+    },
+    "subCategories": {
+      "collection": "item-sub-category"
+    },
+    "game": {
+      "model": "game"
+    },
+    "properties": {
+      "collection": "item-property"
+    }
+  }
+}

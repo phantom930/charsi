@@ -1,0 +1,9 @@
+.card-element-base {
+  border: 2px solid #e3e3e3;
+  padding: 15px 10px;
+  border-radius: 4px;
+}
+
+.card-element-focus {
+  border: 2px solid #7c4dff;
+}

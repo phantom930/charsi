@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bid-decline-reasons",
+      "handler": "bid-decline-reason.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bid-decline-reasons/count",
+      "handler": "bid-decline-reason.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bid-decline-reasons/:id",
+      "handler": "bid-decline-reason.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bid-decline-reasons",
+      "handler": "bid-decline-reason.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bid-decline-reasons/:id",
+      "handler": "bid-decline-reason.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bid-decline-reasons/:id",
+      "handler": "bid-decline-reason.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

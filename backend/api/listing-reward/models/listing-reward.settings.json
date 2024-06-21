@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listing_rewards",
+  "info": {
+    "name": "Listing_Reward",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rewards": {
+      "collection": "reward"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "title": {
+      "type": "string"
+    },
+    "isOpenBids": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "listings": {
+      "collection": "listing"
+    },
+    "bids": {
+      "via": "listing_reward",
+      "collection": "bid"
+    },
+    "visitedUsers": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "visits": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  }
+}

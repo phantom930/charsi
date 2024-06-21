@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bid_decline_reasons",
+  "info": {
+    "name": "BidDeclineReason",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reason": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

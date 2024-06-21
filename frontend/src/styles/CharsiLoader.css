@@ -1,0 +1,18 @@
+/* Styling */
+
+.charsi-loading .charsi-loading-triangle {
+  animation: triangle-rotate 3s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes triangle-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listings",
+  "info": {
+    "name": "Listing",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "game": {
+      "model": "game"
+    },
+    "item": {
+      "model": "item"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "values": {
+      "type": "json"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "ITEM",
+        "BALANCE"
+      ],
+      "default": "ITEM",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trades",
+  "info": {
+    "name": "Trade",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "listing_reward": {
+      "model": "listing-reward"
+    },
+    "bid": {
+      "model": "bid"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "TRADING",
+        "TRADED"
+      ],
+      "default": "TRADING",
+      "required": true
+    },
+    "isSellerConfirmed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isBuyerConfirmed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "proofs": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

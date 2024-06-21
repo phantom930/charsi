@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "listing_reward": {
+      "model": "listing-reward"
+    },
+    "parent": {
+      "model": "comment"
+    },
+    "text": {
+      "type": "text"
+    },
+    "commenter": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "votes": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "isInAppropriate": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

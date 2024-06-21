@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bids",
+  "info": {
+    "name": "Bid",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rewards": {
+      "collection": "reward"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "ACCEPTED",
+        "DECLINED",
+        "ACTIVE"
+      ],
+      "default": "ACTIVE",
+      "required": true
+    },
+    "decline_reason": {
+      "model": "bid-decline-reason"
+    },
+    "listing_reward": {
+      "via": "bids",
+      "model": "listing-reward"
+    }
+  }
+}

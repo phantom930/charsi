@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/scam-reports",
+      "handler": "scam-report.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/scam-reports/count",
+      "handler": "scam-report.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/scam-reports/:id",
+      "handler": "scam-report.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/scam-reports",
+      "handler": "scam-report.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/scam-reports/:id",
+      "handler": "scam-report.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/scam-reports/:id",
+      "handler": "scam-report.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

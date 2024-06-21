@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "item_major_categories",
+  "info": {
+    "name": "ItemMajorCategory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "suzerainGames": {
+      "collection": "game"
+    },
+    "displayOrder": {
+      "type": "integer",
+      "default": 1
+    },
+    "isItemType": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

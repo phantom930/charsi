@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "name": "Notification",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sender": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "recipient": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "ChatMessages",
+        "PurchasedMyListing",
+        "BidOnMyListing",
+        "MyOfferAccepted",
+        "MyOfferDeclined",
+        "MyRequestResponse"
+      ]
+    },
+    "read": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "data": {
+      "type": "json"
+    }
+  }
+}

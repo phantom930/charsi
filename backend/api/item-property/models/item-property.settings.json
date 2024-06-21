@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "item_properties",
+  "info": {
+    "name": "ItemProperty",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "suzerainMajorCategories": {
+      "collection": "item-major-category"
+    },
+    "games": {
+      "collection": "game"
+    },
+    "propertyType": {
+      "type": "enumeration",
+      "enum": [
+        "NUMBER",
+        "STRING",
+        "DROPDOWN"
+      ],
+      "required": true,
+      "default": "STRING"
+    }
+  }
+}

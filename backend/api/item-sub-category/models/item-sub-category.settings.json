@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "item_sub_categories",
+  "info": {
+    "name": "ItemSubCategory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "suzerainGames": {
+      "collection": "game"
+    },
+    "suzerainMajorCategories": {
+      "collection": "item-major-category"
+    },
+    "minorCategory": {
+      "model": "item-minor-category"
+    }
+  }
+}

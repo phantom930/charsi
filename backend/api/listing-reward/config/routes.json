@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/listing-rewards",
+      "handler": "listing-reward.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/listing-rewards/count",
+      "handler": "listing-reward.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/listing-rewards/:id",
+      "handler": "listing-reward.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/listing-rewards",
+      "handler": "listing-reward.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/listing-rewards/:id",
+      "handler": "listing-reward.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/listing-rewards/:id",
+      "handler": "listing-reward.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scam_reports",
+  "info": {
+    "name": "ScamReport",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accusedUser": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "trade": {
+      "model": "trade"
+    },
+    "reason": {
+      "type": "text"
+    },
+    "proofs": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "REVIEW",
+        "COMPLETED"
+      ],
+      "default": "REVIEW",
+      "required": true
+    },
+    "supportReply": {
+      "type": "text"
+    },
+    "reporter": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
