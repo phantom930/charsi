@@ -56,7 +56,7 @@ const SmallSlider = (props: SmallProps) => {
   );
   const borderStyle = (activated) => ({
     background: activated
-      ? "linear-gradient(252.31deg, #7C4DFF 37.91%, #7C4DFF 37.91%, #FB4DFF 86.97%)"
+      ? "#DDD"
       : "#E0E0E0",
     border: "none",
     borderRadius: "50%",
@@ -112,7 +112,7 @@ const MediumSlider = (props: MediumProps) => {
   );
   const borderStyle = (activated) => ({
     background: activated
-      ? "linear-gradient(252.31deg, #7C4DFF 37.91%, #7C4DFF 37.91%, #FB4DFF 86.97%)"
+      ? "#DDD"
       : "#E0E0E0",
     border: "none",
     borderRadius: "50%",
