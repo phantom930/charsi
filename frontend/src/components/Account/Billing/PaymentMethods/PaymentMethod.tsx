@@ -33,7 +33,7 @@ const Panel = ({ isActive = false, children, ...rest }: PanelProps) => (
         height: "calc(100% + 4px)",
         zIndex: -1,
         background: isActive
-          ? "#DDD"
+          ? "linear-gradient(252.31deg, #7C4DFF 37.91%, #7C4DFF 37.91%, #FB4DFF 86.97%)"
           : "#FFF",
         borderRadius: "10px",
       },

@@ -433,7 +433,7 @@ export default function CreateListingDialog({
                   endIcon={<StarEffectIcon size="medium" />}
                   sx={{
                     background:
-                      "#DDD !important",
+                      "linear-gradient(252.31deg, #7C4DFF 37.91%, #7C4DFF 37.91%, #FB4DFF 86.97%) !important",
                   }}
                 >
                   Create items from screenshots

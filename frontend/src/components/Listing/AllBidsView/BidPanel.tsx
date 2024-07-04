@@ -45,7 +45,7 @@ interface BidPanelProps {
 
 const MyBidChip = styled(Chip)({
   background:
-    "#DDD !important",
+    "linear-gradient(252.31deg, #7C4DFF 37.91%, #7C4DFF 37.91%, #FB4DFF 86.97%) !important",
   borderRadius: "100px",
   padding: "4px 16px",
   textTransform: "uppercase",
@@ -143,7 +143,7 @@ export const BidPanel = ({
             borderRadius: "8px",
             background:
               isAcceptedBid || isMyBid
-                ? "#DDD"
+                ? "linear-gradient(252.31deg, #7C4DFF 37.91%, #7C4DFF 37.91%, #FB4DFF 86.97%)"
                 : isActive
                 ? "linear-gradient(265.32deg, rgba(124, 77, 255, 0.15) -3.64%, rgba(124, 77, 255, 0.26) -3.63%, rgba(251, 77, 255, 0.15) 67.56%)"
                 : "#E0E0E0",
